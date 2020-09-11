@@ -33,6 +33,7 @@ class Dlink < Oxidized::Model
 
   cfg :telnet, :ssh do
     post_login 'disable clipaging'
+    pre_logout 'enable clipaging'
     pre_logout 'logout'
   end
 end
